@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import { useGlobalStates } from './utils/global.context'
+
 
 const Footer = () => {
+	const { theme } = useGlobalStates();
   return (
-    <footer>
+    <footer className={theme}>
+      <div>
         <p>Powered by</p>
-        <img src="./img/DH.png" alt='DH-logo' />
+        <p>Mercedes Bakker - CAMADA 4 all rights reserved</p>
+        <img src="./images/DH.png" alt='DH-logo' width="100%"/>
+      </div>
     </footer>
   )
 }
 
-export default Footer
+export default Footer;
